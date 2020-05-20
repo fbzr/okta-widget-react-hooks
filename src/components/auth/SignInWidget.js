@@ -10,7 +10,10 @@ class SignInWidget extends Component {
         baseUrl: this.props.baseUrl,
         logo: 'logo.png'
       });
-      this.widget.renderEl({ el }, this.props.onSuccess);
+      this.widget.renderEl({ 
+        el,
+        features: { registration:true }
+      }, this.props.onSuccess);
     }
   
     componentWillUnmount() {
